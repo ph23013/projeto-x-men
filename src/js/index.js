@@ -14,18 +14,21 @@ personagens.forEach(personagem => {
 
         alterarImagemPersonagemSelecionado(personagem);
 
-        const nomePersonagem = document.getElementById("nome-personagem");
-        nomePersonagem.innerText = personagem.getAttribute("data-name")
+        alterarNomePersonagemSelecionado(personagem);
 
-        const descricaoPersonagem = document.getElementById("descricao-personagem")
-        descricaoPersonagem.innerText = personagem.getAttribute("data-description")
-
-
-
-
-
+        alterarDescricaoPersonagemSelecionado(personagem);
     })
 })
+
+function alterarDescricaoPersonagemSelecionado(personagem) {
+    const descricaoPersonagem = document.getElementById("descricao-personagem");
+    descricaoPersonagem.innerText = personagem.getAttribute("data-description");
+}
+
+function alterarNomePersonagemSelecionado(personagem) {
+    const nomePersonagem = document.getElementById("nome-personagem");
+    nomePersonagem.innerText = personagem.getAttribute("data-name");
+}
 
 function alterarImagemPersonagemSelecionado(personagem) {
     const imagemPersonagemGrande = document.querySelector(".personagem-grande");
